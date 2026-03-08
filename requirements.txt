@@ -1,0 +1,7 @@
+scrapling[all]
+tqdm
+datasets
+datasketch
+regex
+torch
+transformers
