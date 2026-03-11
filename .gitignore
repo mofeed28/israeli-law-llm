@@ -4,3 +4,8 @@ __pycache__/
 .env
 *.egg-info/
 .ipynb_checkpoints/
+generate_batch*.py
+next*.txt
+temp_qa_batch.json
+PHASE2_INSTRUCTIONS.md
+.claude/

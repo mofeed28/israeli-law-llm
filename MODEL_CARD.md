@@ -140,7 +140,7 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```bibtex
 @misc{dictalm2-israeli-law,
   title={DictaLM 2.0 - Israeli Law},
-  author={Mufeed Haj},
+  author={Mufeed Hammud},
   year={2026},
   url={https://huggingface.co/mufeedh28/dictalm2-israeli-law-merged},
   note={Fine-tuned from dicta-il/dictalm2.0 on Israeli legal corpus}
