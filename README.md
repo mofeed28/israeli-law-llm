@@ -91,7 +91,7 @@ Israeli Law Chat Model + GGUF for Ollama
 | Model | Description | Link |
 |-------|-------------|------|
 | **Instruct (Chat)** | Ask legal questions in Hebrew | [HuggingFace](https://huggingface.co/mufeedh28/dictalm2-israeli-law-instruct-merged) |
-| **GGUF** | Run locally with Ollama (~4 GB) | [HuggingFace](https://huggingface.co/mufeedh28/dictalm2-israeli-law-GGUF) |
+| **GGUF** | Run locally with Ollama (F16, ~14.5 GB) | [HuggingFace](https://huggingface.co/mufeedh28/dictalm2-israeli-law-GGUF) |
 | Pretrain (Base) | Text completion only, no chat | [HuggingFace](https://huggingface.co/mufeedh28/dictalm2-israeli-law-pretrain-merged) |
 | Dataset | Full training data | [HuggingFace](https://huggingface.co/datasets/mufeedh28/israeli-law-pretrain) |
 

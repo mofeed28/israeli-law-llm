@@ -8,7 +8,6 @@ tags:
 - israel
 - law
 - ollama
-- quantized
 license: apache-2.0
 language:
 - he
@@ -21,7 +20,7 @@ pipeline_tag: text-generation
 
 ### Run the Hebrew legal chatbot locally with Ollama
 
-**Q4_K_M quantized** | **~4 GB** | **Runs on any 8GB+ GPU or CPU**
+**F16 full precision** | **~14.5 GB** | **Requires 16GB+ RAM**
 
 </div>
 
@@ -43,27 +42,27 @@ Then ask questions in Hebrew:
 
 ## About
 
-This is the **Q4_K_M quantized GGUF** version of [DictaLM 2.0 — Israeli Law Chat](https://huggingface.co/mufeedh28/dictalm2-israeli-law-instruct-merged), a 7B Hebrew legal chatbot fine-tuned on 140K+ Israeli legal documents and 7,291 Q&A pairs.
+This is the **F16 (full precision) GGUF** version of [DictaLM 2.0 — Israeli Law Chat](https://huggingface.co/mufeedh28/dictalm2-israeli-law-instruct-merged), a 7B Hebrew legal chatbot fine-tuned on 140K+ Israeli legal documents and 7,291 Q&A pairs.
 
-For full model details, training data, benchmarks, and usage examples, see the [main model card](https://huggingface.co/mufeedh28/dictalm2-israeli-law-instruct-merged).
+For full model details, training data, and usage examples, see the [main model card](https://huggingface.co/mufeedh28/dictalm2-israeli-law-instruct-merged).
 
 ## File Details
 
-| File | Quantization | Size | Quality |
-|------|:-----------:|:----:|:-------:|
-| `dictalm2-israeli-law-merged.Q4_K_M.gguf` | Q4_K_M | ~4.4 GB | Good balance of speed and quality |
+| File | Precision | Size | Quality |
+|------|:---------:|:----:|:-------:|
+| `dictalm2-israeli-law.F16.gguf` | F16 | ~14.5 GB | Full precision — no quality loss |
 
 ## Requirements
 
 - [Ollama](https://ollama.com/) installed
-- 8 GB+ RAM (GPU or CPU)
+- 16 GB+ RAM (GPU or CPU)
 
 ## Alternative Usage
 
 ### With llama.cpp directly
 
 ```bash
-./llama-cli -m dictalm2-israeli-law-merged.Q4_K_M.gguf -p "[INST] מהן זכויות העובד בפיטורים? [/INST]" -n 512
+./llama-cli -m dictalm2-israeli-law.F16.gguf -p "[INST] מהן זכויות העובד בפיטורים? [/INST]" -n 512
 ```
 
 ### With llama-cpp-python
@@ -71,7 +70,7 @@ For full model details, training data, benchmarks, and usage examples, see the [
 ```python
 from llama_cpp import Llama
 
-llm = Llama(model_path="dictalm2-israeli-law-merged.Q4_K_M.gguf", n_ctx=2048)
+llm = Llama(model_path="dictalm2-israeli-law.F16.gguf", n_ctx=2048)
 output = llm("[INST] מהן זכויות העובד בפיטורים? [/INST]", max_tokens=512, temperature=0.7)
 print(output["choices"][0]["text"])
 ```
